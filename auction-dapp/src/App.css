@@ -1,0 +1,388 @@
+/* src/App.css */
+
+/* CSS Variables for Consistent Theming */
+:root {
+  --primary-color: #ffa600;
+  --secondary-color: #ff7c00;
+  --background-color: #222222;
+  --container-bg: rgba(51, 51, 51, 0.92);
+  --text-color: #ffffff;
+  --text-shadow-color: #000;
+  --font-family: 'Overseer', sans-serif;
+}
+
+/* Font Face */
+@font-face {
+  font-family: 'Overseer';
+  src: url('/font/monofonto rg.otf') format('opentype');
+}
+
+/* Global Styles */
+body {
+  font-family: var(--font-family), sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("/img/background.jpg");
+  background-position: center;
+  color: var(--text-color);
+  text-shadow: -1px -1px 0 var(--text-shadow-color), 
+               1px -1px 0 var(--text-shadow-color), 
+               -1px 1px 0 var(--text-shadow-color), 
+               1px 1px 0 var(--text-shadow-color);
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--container-bg);
+  border-radius: 10px;
+}
+
+/* Header Styles */
+header {
+  background-color: var(--background-color);
+  padding: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo h1 {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.logo img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+/* Button Styles */
+.button, .shop_button, button {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: background-color 0.2s ease-in-out;
+  font-family: var(--font-family), sans-serif;
+  text-shadow: -1px -1px 0 var(--text-shadow-color), 
+               1px -1px 0 var(--text-shadow-color), 
+               -1px 1px 0 var(--text-shadow-color), 
+               1px 1px 0 var(--text-shadow-color);
+}
+
+.button:hover, .shop_button:hover, button:hover {
+  background-color: var(--secondary-color);
+}
+
+.shop_button {
+  padding: 15px 30px;
+  font-size: 1.5rem;
+}
+
+/* Auction Status */
+.auction-status {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.auction-status h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.auction-status p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color:#ff7c00;
+}
+
+/* Display Owner */
+.display-owner {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.display-owner h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.display-owner p {
+  font-size: 1.2rem;
+}
+
+/* Finalize Auction */
+.finalize-auction {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.finalize-auction h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.finalize-auction button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+}
+
+/* NFT Display */
+.nft-display {
+  margin-bottom: 30px;
+}
+
+.nft-display h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.nft-card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: #333;
+  border-radius: 10px;
+}
+
+.nft-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.nft-card img {
+  max-width: 200px;
+  display: block;
+  margin: 0 auto 10px;
+  border-radius: 10px;
+}
+
+.nft-card p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.nft-card ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.nft-card li {
+  font-size: 0.9rem;
+  color: #CF9B3B;
+}
+
+/* Place Bid */
+.place-bid {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.place-bid h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.place-bid .input-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.place-bid input, .place-bid select {
+  padding: 10px;
+  font-size: 1rem;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.place-bid select {
+  width: 100px;
+}
+
+.place-bid button {
+  width: 150px;
+  font-size: 1.2rem;
+}
+
+/* Start Auction */
+.start-auction {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.start-auction h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.start-auction input {
+  padding: 10px;
+  font-size: 1rem;
+  margin: 5px 0;
+  width: 80%;
+  max-width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.start-auction button {
+  margin-top: 15px;
+  width: 200px;
+  font-size: 1.2rem;
+}
+
+/* Withdraw Funds */
+.withdraw-funds {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.withdraw-funds h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.withdraw-funds p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.withdraw-funds button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+}
+
+/* Footer Styles */
+footer {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 40px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-section {
+  flex: 1 1 30%;
+  margin-bottom: 20px;
+}
+
+.footer-section h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.footer-section p, .footer-section ul {
+  font-size: 0.9rem;
+}
+
+.footer-section ul li {
+  margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+  color: var(--text-color);
+}
+
+.footer-section ul li a:hover {
+  color: var(--primary-color);
+}
+
+.footer-contact ul li {
+  display: flex;
+  align-items: center;
+}
+
+.footer-contact ul li i {
+  margin-right: 10px;
+  color: var(--primary-color);
+}
+
+/* Credits */
+.credits {
+  background-color: #2b2b2b;
+  color: #ffffff;
+  padding: 10px 40px;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px 0;
+  }
+
+  .logo h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  /* Auction Status */
+  .auction-status h2,
+  .display-owner h2,
+  .finalize-auction h2,
+  .nft-display h2,
+  .place-bid h2,
+  .start-auction h2,
+  .withdraw-funds h2 {
+    font-size: 1.8rem;
+  }
+
+  /* Place Bid */
+  .place-bid .input-group {
+    flex-direction: column;
+  }
+
+  .place-bid input, .place-bid select {
+    margin: 5px 0;
+    width: 90%;
+  }
+
+  /* Footer */
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+}
